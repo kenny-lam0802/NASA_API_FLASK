@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Images</title>
+</head>
+<body>
+    {% for each_dictionary in session["results"] %}
+        <p>Date: {{each_dictionary["date"]}}</p>
+        <p>Description: {{each_dictionary["description"]}}</p>
+        <img src="{{ each_dictionary['image'] }}">
+    {% endfor %}
+</body>
+</html>
